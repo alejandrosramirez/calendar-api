@@ -1,2 +1,2 @@
 # calendar-api
-## Node.js. Express.js and MongoDB
+## Node.js, Express.js and MongoDB
