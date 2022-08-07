@@ -12,7 +12,10 @@ const authenticated = (req = request, res = response, next) => {
 	}
 
 	try {
+		const { uid, name } = jwt.verify(token, process.env.API_SECRET_JWT);
 
+		req.uid = uid;
+		req.name = name;
 	} catch (error) {
 		return res.status(401).json({
 			ok: false,

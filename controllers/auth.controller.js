@@ -83,10 +83,15 @@ const login = async (req = request, res = response) => {
 	}
 };
 
-const refresh = (req = request, res = response) => {
+const refresh = async (req = request, res = response) => {
+	const uid = req.uid;
+	const name = req.name;
+
+	const token = await generateJWT(uid, name);
+
 	res.json({
 		ok: true,
-		message: "Refresh",
+		token,
 	});
 };
 
