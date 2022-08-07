@@ -131,7 +131,6 @@ const destroy = async (req = request, res = response) => {
 
 		res.json({
 			ok: true,
-			event: null,
 		});
 	} catch (error) {
 		console.log(`Ocurrió el siguiente error: [${error.message}]`);
