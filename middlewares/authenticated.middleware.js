@@ -10,6 +10,7 @@ const authenticated = (req = request, res = response, next) => {
 			message: "No existe el token en la petición",
 		});
 	}
+
 	try {
 
 	} catch (error) {
